@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+<div id="slider-wrapper">
+	<!-- slider controls -->
+	<div class="slider-controlls">
+		<button class="next">></button>
+		<button class="prev"><</button>
+	</div>
+	<!-- slider items -->
+	<div class="slider-items">
+		<div class="slider-item">
+			<div class="content">
+				<!-- <h1>Title 1</h1> -->
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+				<img src="{% static 'images/group.jpg' %}">
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="content">
+				<!-- <h1>Title 2</h1> -->
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+				<img src="{% static 'images/group2.jpg' %}">
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="content">
+				<!-- <h1>Title 3</h1> -->
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+				<img src="{% static 'images/group3.jpg' %}">
+			</div>
+		</div>
+	</div>
+	<!-- slider bullets -->  
+	<div class="slider-bullets">
+		<span class="bullet"></span>
+		<span class="bullet"></span>
+		<span class="bullet"></span>
+	</div>
+</div>
+<div class="box">
+	<div id="box_inside">
+		<div style="background-color:#223A5E;height: 40px;color: white;padding: 5px;font-size: 20px;text-align: center;border-top-left-radius: 20px;border-top-right-radius: 20px; ">
+			Notice Board
+		</div>
+		<div class="noticebrd">
+			<div class="content">
+				Youth Empowerment Speech 
+				<br>
+				<b>
+					Venue : Ambedkar Seminar Hall
+					<br>
+					Date : 1st Aug,2020
+					<br>
+					Time : 04:30 PM
+				</b>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="box1">
+	<h1 id="box1_head">Youth Empowerment</h1>
+	<p>
+		Youth empowerment is a process where children and young people are encouraged to take charge of their lives. They do this by addressing their situation and then take action in order to improve their access to resources and transform their consciousness through their beliefs, values, and attitudes. Youth empowerment aims to improve quality of life. Youth empowerment is achieved through participation in youth empowerment programs. However scholars argue that children’s rights implementation should go beyond learning about formal rights and procedures to give birth to a concrete experience of rights.There are numerous models that youth empowerment programs use that help youth achieve empowerment. A variety of youth empowerment initiatives are underway around the world. These programs can be through non-profit organizations, government organizations, schools or private organizations. <br>
+
+		Youth empowerment is different from youth development because development is centered on developing individuals, while empowerment is focused on creating greater community change relies on the development of individual capacity. <br>
+
+		Empowerment movements, including youth empowerment, originate, gain momentum, become viable, and become institutionalized.[1] Youth empowerment is often addressed as a gateway to intergenerational equity, civic engagement and democracy building. Activities may focus on youth-led media, youth rights, youth councils, youth activism, youth involvement in community decision-making,[4] and other methods.
+	</p>
+	<h3>Empowerment theory:</h3>
+	<p>
+		Empowerment theory focuses on processes that enable participation; enhance control through shared decision making; and create opportunities to learn, practice, and increase skills.[5][6] Empowerment theory suggests that engaging youth in pro-social, meaningful, and community-enhancing activities that the youth themselves define and control, helps youth gain vital skills, responsibilities, and confidence necessary to become productive and healthy adults.[7]
+	</p>
+	
+	<h3>Goals of empowerment: </h3>
+	<p>
+		Youth empowerment programs are aimed at creating healthier and higher qualities of life for underprivileged or at-risk youth. The five competencies of a healthy youth are: (1) positive sense of self, (2) self- control, (3) decision-making skills, (4) a moral system of belief, and (5) pro-social connectedness. Developmental interventions and programs have to be anchored on these competencies that define positive outcomes of healthy youth.s
+	</p>
+</div>
+<br>
+
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+

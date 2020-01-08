@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Youth Empowerment</title>
+	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/bootstrap-dropdownhover.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'footer.css' %}">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/events.css' %}">
+	<!-- <link rel="stylesheet/less" type="text/css" href="{% static 'css/styles.less' %}" /> -->
+
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}"> -->
+	{% block style %}
+	{% endblock %}
+</head>
+<body onload="myfunction()">
+	<div id="loading">	</div>
+	<div>
+		<div class="row top">
+			<div class="col-sm-3 col-xs-3">
+				<img src="{% static 'images/fist.jpg' %}"  id="nitw">
+			</div>
+			<div class="col-sm-3 col-xs-3">
+				<img src="{% static 'images/yepi.png' %}" id="ecea">
+				<!-- <span id="name">Electronics and Communication Engineering Associaton</span> -->
+			</div>
+			<div class="col-sm-3 col-xs-3">
+				<img src="{% static 'images/hands.jpg' %}"  id="diamond">
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-default head navbar-static-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{% url 'home' %}">Youth Empowerment</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="{% url 'team' %}">Government <span class="sr-only">(current)</span></a></li>
+					<li><a class="nav-item nav-link" href="{% url 'preparation' %}">Programs</a></li>
+					<li><a class="nav-item nav-link" href="{% url 'event' %}">Awards</a></li>
+					<li><a class="nav-item nav-link" href="{% url 'gallery' %}">Importance</a></li>
+					
+				</ul>
+				
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+
+	
+
+	<div class="container content">
+		{% block content %}{% endblock %}
+	</div>
+	<footer id="font">
+		<br>
+		<div class="row">
+			<div class="col-sm-12" id="foot-detail">
+				<h3">STAY CONNECTED WITH US</h3>
+				<a href="https://www.facebook.com/Cameroon-Youth-Empowerment-Program-928008197253468/">
+					<img class="size" src="{% static 'svgs/facebook.svg' %}" class="img-thumbnail">
+				</a>
+				<!-- <a href="https://www.instagram.com/ecea.nitw/">
+					<img class="size" src="{% static 'svgs/instagram.svg' %}" class="img-thumbnail">
+				</a> -->
+			</div>
+			<br>
+			<h3 id="font">Youth Empowerment</h3>
+			<div class="dp_website">
+				<a href="https://www.voicesofyouth.org/blog/youth-empowerment-better-society">voice of youth</a>
+			</div>
+			<div class="dp_website">
+				<a href="https://charterforcompassion.org/charter-tool-box-a-framework-for-getting-started/youth-empowerment">charter fot compassion</a>
+			</div>
+			<!-- <div id="copyright">Copyright  © 2019 ECEA</div><br> -->
+		</div>
+	</div>
+</footer>
+<script>
+	var preloader = document.getElementById('loading');
+	function myfunction(){
+		preloader.style.display = 'none';
+	}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-dropdownhover.min.js' %}"></script>
+<script src="{% static 'js/home.js' %}"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>
